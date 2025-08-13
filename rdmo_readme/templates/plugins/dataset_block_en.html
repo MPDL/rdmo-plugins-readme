@@ -1,0 +1,128 @@
+{% load view_tags %}
+
+<h4>Administrative information</h4>
+          
+<strong>Title of the dataset:</strong> {{ dataset.value }} <br/>
+
+<strong>Creator of the ReadMe:</strong> [To Do]<br/>
+
+<strong>Creator of the dataset:</strong> 
+{% get_set 'project/partner/id' as partners %}
+{% if partners %}
+{% for partner in partners %}
+    {% get_set_value partner 'project/partner/name' as partner_name %}
+    {{ partner_name.value }}{% if not forloop.last %},{% endif %}
+{% endfor %}
+{% else %}
+[To Do]
+{% endif %}
+<br/>
+
+<strong>Contact details:</strong><br/>
+<ul>
+<li>Name: 
+    {% get_set_value dataset 'project/dataset/preservation/responsible_person/name' as name %}
+    {% if name.value %}
+    {% render_set_value dataset 'project/dataset/preservation/responsible_person/name' %}
+    {% else %}
+    [To Do]
+    {% endif %}
+</li>
+<li>ORCID: [To Do]</li>
+<li>Email: 
+    {% get_set_value dataset 'project/dataset/preservation/responsible_person/email' as email %}
+    {% if email.value %}
+    {% render_set_value dataset 'project/dataset/preservation/responsible_person/email' %}
+    {% else %}
+    [To Do]
+    {% endif %}
+</li>
+</ul>
+
+<h4>Classification of this dataset</h4>
+
+<strong>Description of the data set:</strong> 
+{% get_set_value dataset 'project/dataset/description' as description %}
+{% if description.value %}
+{% render_set_value dataset 'project/dataset/description' %}<br/>
+{% else %}
+[To Do]<br/>
+{% endif %}
+
+<strong>Start of data collection:</strong>
+{% get_set_value dataset 'project/dataset/data_collection_start' as collection_start %}
+{% if collection_start.value %}
+{% render_set_value dataset 'project/dataset/data_collection_start' %}<br/>
+{% else %}
+[To Do]<br/>
+{% endif %}
+
+<strong>End of data collection:</strong> 
+{% get_set_value dataset 'project/dataset/data_collection_end' as collection_end %}
+{% if collection_end.value %}
+{% render_set_value dataset 'project/dataset/data_collection_end' %}<br/>
+{% else %}
+[To Do]<br/>
+{% endif %}
+
+<strong>Methods, tools, software and formats:</strong> <br/>
+Instruments, software, technologies, processes:
+{% get_set_value dataset 'project/dataset/creation_methods' as creation_methods %}
+{% if creation_methods.value %}
+{% render_set_value dataset 'project/dataset/creation_methods' %}<br/>
+{% else %}
+[To Do]<br/>
+{% endif %}
+Format: 
+{% get_set_value dataset 'project/dataset/format' as format %}
+{% if format.value %}
+{% render_set_value dataset 'project/dataset/format' %} <br/>
+{% else %}
+[To Do]<br/>
+{% endif %}
+
+<strong>File naming conventions:</strong> <br/>
+{% get_set_value dataset 'project/dataset/storage/naming_policy' as naming_policy %}
+{% if naming_policy.text %}Data are structured as follows: {{ naming_policy.text }}{% else %}[To Do]{% endif %}<br/>
+{% get_set_value dataset 'project/dataset/storage/organisation_policy' as org_policy %}
+{% if org_policy.text %} Furthermore, the insitutional specifications are to be taken into account: {{ org_policy.text }}{% else %}There are no institutional specifications.{% endif %}<br/>
+
+<h4>Data reuse</h4>
+
+<strong>Tools and software for reuse:</strong> 
+{% get_set_value dataset 'project/dataset/usage_technology' as usage_technology %}
+{% if usage_technology.value %}
+{% render_set_value dataset 'project/dataset/usage_technology' %}<br/>
+{% else %}
+[To Do]<br/>
+{% endif %}
+
+<strong>Versions:</strong> 
+{% get_set_value dataset 'project/dataset/versioning_versions_differences' as versioning %}
+{% if versioning.value %}
+{% render_set_value dataset 'project/dataset/versioning_versions_differences' %}<br/>
+{% else %}
+[To Do]<br/>
+{% endif %}
+
+<strong>Persistent Identifier of this data set:</strong> 
+{% get_set_value dataset 'project/dataset/pids/system' as pid %}
+{% if pid.value %}
+{% render_set_value dataset 'project/dataset/pids/system' %}: [To Do]<br/>
+{% else %}
+[To Do]<br/>
+{% endif %}
+
+<strong>Related items:</strong> [To Do]<br>
+
+<strong>Licence of this dataset:</strong> 
+{% get_values 'project/dataset/sharing/conditions' set_index=dataset.set_index as licenses %}
+{% if licenses %}
+<ul>
+{% for license in licenses %}
+    <li>{{ license.value }}</li>
+{% endfor %}
+</ul>
+{% else %}
+[To Do]
+{% endif %}

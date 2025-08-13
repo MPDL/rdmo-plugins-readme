@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/" created="2025-08-12T18:27:05.704153+02:00" required="2.1.0" version="2.3.2">
+	<view dc:uri="https://rdmo-hackathon-25.de/terms/views/rdmo-readme">
+		<uri_prefix>https://rdmo-hackathon-25.de/terms</uri_prefix>
+		<uri_path>rdmo-readme</uri_path>
+		<dc:comment/>
+		<order>0</order>
+		<title lang="en">ReadMe</title>
+		<help lang="en">This view provides an initial draft for a README that can be used when publishing data.</help>
+		<title lang="de">ReadMe</title>
+		<help lang="de">Diese Ansicht bietet einen ersten Entwurf für ein ReadMe, das bei einer Datenpublikation genutzt werden kann.</help>
+		<catalogs>
+			<catalog dc:uri="https://rdmorganiser.github.io/terms/questions/rdmo"/>
+		</catalogs>
+		<template>{% load view_tags %}
+{% load i18n %}
+
+&lt;!-- THIS VIEW ONLY WORKS WITH RDMO EXPORT PLUGIN (https://github.com/MPDL/rdmo-plugins-readme) --&gt;
+{% load rdmo_readme_tags %}
+
+{% get_set 'project/dataset/id' as datasets %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% if LANGUAGE_CODE == &quot;de&quot; %}
+    {% if not datasets %}
+        &lt;h1&gt;ReadMe&lt;/h1&gt;
+        Dieses ReadMe enthält essentielle Informationen zum Verständnis dieses Datensatzes, um Transparenz, Nachvollziehbarkeit und Wiederverwendbarkeit der Daten sicherzustellen.&lt;br/&gt;  
+        &lt;br/&gt;
+        &lt;br/&gt;
+        Bitte lege zuerst einen Datenmanagementplan an.
+    
+    {% elif dataset == None %}  
+        &lt;h1&gt;ReadMe&lt;/h1&gt;
+        Dieses ReadMe enthält essentielle Informationen zum Verständnis dieses Datensatzes, um Transparenz, Nachvollziehbarkeit und Wiederverwendbarkeit der Daten sicherzustellen.&lt;br/&gt;  
+        
+        {% for dataset in datasets %}    
+            &lt;h2&gt;{{ dataset.value }}&lt;/h2&gt;        
+            {% render_dataset_block dataset LANGUAGE_CODE %}
+        {% endfor %}
+
+    {% else %}
+    &lt;!-- EXPORT PLUGIN: dataset parameter is passed to view --&gt;    
+        &lt;h1&gt;ReadMe&lt;/h1&gt;
+        Dieses ReadMe enthält essentielle Informationen zum Verständnis dieses Datensatzes, um Transparenz, Nachvollziehbarkeit und Wiederverwendbarkeit der Daten sicherzustellen.&lt;br/&gt;  
+        
+        {% render_dataset_block dataset LANGUAGE_CODE %}
+
+    {% endif %}
+
+{% else %}
+&lt;!-- DISPLAY ENGLISH TEXT FOR ANY OTHER LANGUAGE_CODE --&gt;
+    {% if not datasets %}
+        &lt;h1&gt;ReadMe&lt;/h1&gt;
+        This ReadMe contains essential information for understanding this dataset to ensure transparency, traceability and reusability of the data.&lt;br/&gt;  
+        &lt;br/&gt;
+        &lt;br/&gt;
+        Please put some information in your data management plan.
+    
+    {% elif dataset == None %}    
+        &lt;h1&gt;ReadMe&lt;/h1&gt;
+        This ReadMe contains essential information for understanding this dataset to ensure transparency, traceability and reusability of the data.&lt;br/&gt;  
+    
+        {% for dataset in datasets %}
+            &lt;h2&gt;{{ dataset.value }}&lt;/h2&gt;    
+            {% render_dataset_block dataset LANGUAGE_CODE %}
+        {% endfor %}
+
+    {% else %}
+    &lt;!-- EXPORT PLUGIN: dataset parameter is passed to view --&gt;
+        &lt;h1&gt;ReadMe&lt;/h1&gt;
+        This ReadMe contains essential information for understanding this dataset to ensure transparency, traceability and reusability of the data.&lt;br/&gt;  
+        
+        {% render_dataset_block dataset LANGUAGE_CODE %}
+
+    {% endif %}
+
+{% endif %}</template>
+	</view>
+</rdmo>

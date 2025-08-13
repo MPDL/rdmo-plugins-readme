@@ -1,0 +1,17 @@
+{% extends 'core/page.html' %}
+{% load i18n %}
+{% load core_tags %}
+
+{% block page %}
+
+    <h1>{% trans 'Export README file(s)' %}</h1>
+
+    <p>
+        This export plugin creates for you one or multiple README files with information from your RDMO project's datasets.
+        You can create a custom view that needs to be imported beforehand and use it as a template for your README files. 
+        A default view will be otherwise used.
+    </p>
+
+    {% bootstrap_form submit=_('Go') %}
+
+{% endblock %}
