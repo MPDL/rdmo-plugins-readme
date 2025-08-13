@@ -7,7 +7,7 @@ This repo implements a plugin for [RDMO](https://github.com/rdmorganiser/rdmo) t
 1. Install the plugin in your RDMO virtual environment using pip (directly from GitHub):
 
         ```bash
-        pip install git+https://github.com/MPDL/rdmo-plugins-readme
+        pip install git+https://github.com/MPDL/rdmo-plugins-readme.git
         ```
 
 2. Add "plain" to EXPORT_FORMATS in `config/settings/local.py`:
