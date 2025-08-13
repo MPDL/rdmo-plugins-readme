@@ -28,8 +28,11 @@ dynamic = ["version"]
 [project.urls]
 repository = "https://github.com/MPDL/rdmo-plugins-readme"
 
-[tool.setuptools]
-packages = ["rdmo_readme"]
+[tool.setuptools.packages.find]
+include = ["rdmo_readme*"]
+
+[tool.setuptools.package-data]
+"*" = ["*"]
 
 [tool.setuptools.dynamic]
 version = {attr = "rdmo_readme.__version__"}
