@@ -22,11 +22,13 @@ class ReadmeExport(OauthProviderMixin, Export):
     class Form(forms.Form):
         view_uri = forms.CharField(
             label=_("Template view's URI"),
-            help_text=_('Change this field only if you want to provide your own template view'),
+            help_text=_('Change this field only if you want to provide your own template view.'),
             initial='https://rdmo-hackathon-25.de/terms/views/rdmo-readme'
         )
+
         datasets = forms.MultipleChoiceField(
-            label=_('Select one or multiple datasets of your project'),
+            label=_('Project dataset(s)'),
+            help_text=_('One README file will be created for each selected choice. If you want a single README file with all datasets, please select the last choice.'),
             widget=forms.CheckboxSelectMultiple,
             choices=[]
         )
@@ -35,7 +37,7 @@ class ReadmeExport(OauthProviderMixin, Export):
             dataset_choices = kwargs.pop('dataset_choices')
             super().__init__(*args, **kwargs)
 
-            self.fields['datasets'].choices = [*dataset_choices, ('all', _('All project datasets'))]
+            self.fields['datasets'].choices = [*dataset_choices, ('all', _('All datasets in one file'))]
 
     def render(self):
         datasets = self.get_set('project/dataset/id')
@@ -65,7 +67,7 @@ class ReadmeExport(OauthProviderMixin, Export):
             if response is None:
                 return render(self.request, 'core/error.html', {
                     'title': _('Something went wrong'),
-                    'errors': [_('The readme could not be created.')]
+                    'errors': [_('The README could not be created.')]
                 }, status=200)
             
             return response
