@@ -31,7 +31,7 @@
     {%   if LANGUAGE_CODE == &quot;de&quot; %}Dieses ReadMe enthält essentielle Informationen zum Verständnis dieses Datensatzes, um Transparenz, Nachvollziehbarkeit und Wiederverwendbarkeit der Daten sicherzustellen.
     {% elif LANGUAGE_CODE == &quot;es&quot; %}Este Léame contiene información esencial para comprender este conjunto de datos y garantizar su transparencia, trazabilidad y reutilización.
     {% elif LANGUAGE_CODE == &quot;fr&quot; %}Ce ReadMe contient des informations essentielles à la compréhension de cet ensemble de données, afin de garantir la transparence, la traçabilité et la réutilisation des données.
-    {% elif LANGUAGE_CODE == &quot;it&quot; %}Questo ReadMe contiene informazioni essenziali per la comprensione di questo set di dati per garantire la trasparenza, la tracciabilità e la riutilizzabilità dei dati.
+    {% elif LANGUAGE_CODE == &quot;it&quot; %}Questo ReadMe contiene informazioni essenziali per la comprensione di questa raccolta di dati per garantire la trasparenza, la tracciabilità e la riutilizzabilità dei dati.
     {% else %}This ReadMe contains essential information for understanding this dataset to ensure transparency, traceability and reusability of the data.
     {% endif %}&lt;!-- DISPLAY ENGLISH TEXT FOR ANY OTHER LANGUAGE_CODE --&gt;
 
