@@ -1,5 +1,11 @@
 {% if language_code == "de" %}
     {% include 'plugins/dataset_block_de.html' %}
+{% elif language_code == "es" %}
+    {% include 'plugins/dataset_block_es.html' %}
+{% elif language_code == "fr" %}
+    {% include 'plugins/dataset_block_fr.html' %}
+{% elif language_code == "it" %}
+    {% include 'plugins/dataset_block_it.html' %}
 {% else %}
     {% include 'plugins/dataset_block_en.html' %}
 {% endif %}
