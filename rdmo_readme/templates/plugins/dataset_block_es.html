@@ -1,17 +1,17 @@
 {% load view_tags %}
 
 <h4>Información administrativa</h4>
-          
+
 <strong>Título del conjunto de datos:</strong> {{ dataset.value }} <br/>
 
 <strong>Creador del Léame:</strong> [To Do]<br/>
 
-<strong>Creador del conjunto de datos:</strong> 
+<strong>Creador del conjunto de datos:</strong>
 {% get_set 'project/partner/id' as partners %}
 {% if partners %}
 {% for partner in partners %}
     {% get_set_value partner 'project/partner/name' as partner_name %}
-    {{ partner_name.value }}{% if not forloop.last %},{% endif %}
+    {% render_value_inline_list partner_name %}
 {% endfor %}
 {% else %}
 [To Do]
@@ -20,7 +20,7 @@
 
 <strong>Información de contacto:</strong><br/>
 <ul>
-<li>Nombre: 
+<li>Nombre:
     {% get_set_value dataset 'project/dataset/preservation/responsible_person/name' as name %}
     {% if name.value %}
     {% render_set_value dataset 'project/dataset/preservation/responsible_person/name' %}
@@ -29,7 +29,7 @@
     {% endif %}
 </li>
 <li>ORCID: [To Do]</li>
-<li>Correo electrónico: 
+<li>Correo electrónico:
     {% get_set_value dataset 'project/dataset/preservation/responsible_person/email' as email %}
     {% if email.value %}
     {% render_set_value dataset 'project/dataset/preservation/responsible_person/email' %}
@@ -41,7 +41,7 @@
 
 <h4>Clasificación del conjunto de datos</h4>
 
-<strong>Descripción del conjunto de datos:</strong> 
+<strong>Descripción del conjunto de datos:</strong>
 {% get_set_value dataset 'project/dataset/description' as description %}
 {% if description.value %}
 {% render_set_value dataset 'project/dataset/description' %}<br/>
@@ -57,7 +57,7 @@
 [To Do]<br/>
 {% endif %}
 
-<strong>Fin de la recolección de datos:</strong> 
+<strong>Fin de la recolección de datos:</strong>
 {% get_set_value dataset 'project/dataset/data_collection_end' as collection_end %}
 {% if collection_end.value %}
 {% render_set_value dataset 'project/dataset/data_collection_end' %}<br/>
@@ -73,7 +73,7 @@ Instrumentos, software, tecnologías, procesos:
 {% else %}
 [To Do]<br/>
 {% endif %}
-Formato: 
+Formato:
 {% get_set_value dataset 'project/dataset/format' as format %}
 {% if format.value %}
 {% render_set_value dataset 'project/dataset/format' %} <br/>
@@ -89,7 +89,7 @@ Formato:
 
 <h4>Reutilización de datos</h4>
 
-<strong>Herramientas y software para la reutilización:</strong> 
+<strong>Herramientas y software para la reutilización:</strong>
 {% get_set_value dataset 'project/dataset/usage_technology' as usage_technology %}
 {% if usage_technology.value %}
 {% render_set_value dataset 'project/dataset/usage_technology' %}<br/>
@@ -97,7 +97,7 @@ Formato:
 [To Do]<br/>
 {% endif %}
 
-<strong>Versiones:</strong> 
+<strong>Versiones:</strong>
 {% get_set_value dataset 'project/dataset/versioning_versions_differences' as versioning %}
 {% if versioning.value %}
 {% render_set_value dataset 'project/dataset/versioning_versions_differences' %}<br/>
@@ -105,7 +105,7 @@ Formato:
 [To Do]<br/>
 {% endif %}
 
-<strong>Identificador persistente de este conjunto de datos:</strong> 
+<strong>Identificador persistente de este conjunto de datos:</strong>
 {% get_set_value dataset 'project/dataset/pids/system' as pid %}
 {% if pid.value %}
 {% render_set_value dataset 'project/dataset/pids/system' %}: [To Do]<br/>
@@ -115,7 +115,7 @@ Formato:
 
 <strong>Elementos relacionados:</strong> [To Do]<br>
 
-<strong>Licencia de este conjunto de datos:</strong> 
+<strong>Licencia de este conjunto de datos:</strong>
 {% get_values 'project/dataset/sharing/conditions' set_index=dataset.set_index as licenses %}
 {% if licenses %}
 <ul>

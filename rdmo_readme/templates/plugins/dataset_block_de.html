@@ -1,17 +1,17 @@
 {% load view_tags %}
 
 <h4>Administrative Informationen</h4>
-          
+
 <strong>Titel des Datensatzes:</strong> {{ dataset.value }} <br/>
 
 <strong>Ersteller*in des ReadMe:</strong> [To Do]<br/>
 
-<strong>Ersteller*in des Datensatzes:</strong> 
+<strong>Ersteller*in des Datensatzes:</strong>
 {% get_set 'project/partner/id' as partners %}
 {% if partners %}
 {% for partner in partners %}
     {% get_set_value partner 'project/partner/name' as partner_name %}
-    {{ partner_name.value }}{% if not forloop.last %},{% endif %}
+    {% render_value_inline_list partner_name %}
 {% endfor %}
 {% else %}
 [To Do]
@@ -20,7 +20,7 @@
 
 <strong>Kontaktmöglichkeit:</strong><br/>
 <ul>
-<li>Name: 
+<li>Name:
     {% get_set_value dataset 'project/dataset/preservation/responsible_person/name' as name %}
     {% if name.value %}
     {% render_set_value dataset 'project/dataset/preservation/responsible_person/name' %}
@@ -29,7 +29,7 @@
     {% endif %}
 </li>
 <li>ORCID: [To Do]</li>
-<li>E-Mail: 
+<li>E-Mail:
     {% get_set_value dataset 'project/dataset/preservation/responsible_person/email' as email %}
     {% if email.value %}
     {% render_set_value dataset 'project/dataset/preservation/responsible_person/email' %}
@@ -41,7 +41,7 @@
 
 <h4>Einordnung des Datensatzes</h4>
 
-<strong>Beschreibung des Datensatzes:</strong> 
+<strong>Beschreibung des Datensatzes:</strong>
 {% get_set_value dataset 'project/dataset/description' as description %}
 {% if description.value %}
 {% render_set_value dataset 'project/dataset/description' %}<br/>
@@ -57,7 +57,7 @@
 [To Do]<br/>
 {% endif %}
 
-<strong>Ende der Datensammlung:</strong> 
+<strong>Ende der Datensammlung:</strong>
 {% get_set_value dataset 'project/dataset/data_collection_end' as collection_end %}
 {% if collection_end.value %}
 {% render_set_value dataset 'project/dataset/data_collection_end' %}<br/>
@@ -66,14 +66,14 @@
 {% endif %}
 
 <strong>Methoden, Werkzeuge, Software und Formate:</strong> <br/>
-Instrumente, Software, Technologien, Verfahren: 
+Instrumente, Software, Technologien, Verfahren:
 {% get_set_value dataset 'project/dataset/creation_methods' as creation_methods %}
 {% if creation_methods.value %}
 {% render_set_value dataset 'project/dataset/creation_methods' %}<br/>
 {% else %}
 [To Do]<br/>
 {% endif %}
-Format: 
+Format:
 {% get_set_value dataset 'project/dataset/format' as format %}
 {% if format.value %}
 {% render_set_value dataset 'project/dataset/format' %} <br/>
@@ -89,7 +89,7 @@ Format:
 
 <h4>Nachnutzung</h4>
 
-<strong>Werkzeuge und Software zur Nachnutzung:</strong> 
+<strong>Werkzeuge und Software zur Nachnutzung:</strong>
 {% get_set_value dataset 'project/dataset/usage_technology' as usage_technology %}
 {% if usage_technology.value %}
 {% render_set_value dataset 'project/dataset/usage_technology' %}<br/>
@@ -97,7 +97,7 @@ Format:
 [To Do]<br/>
 {% endif %}
 
-<strong>Versionen:</strong> 
+<strong>Versionen:</strong>
 {% get_set_value dataset 'project/dataset/versioning_versions_differences' as versioning %}
 {% if versioning.value %}
 {% render_set_value dataset 'project/dataset/versioning_versions_differences' %}<br/>
@@ -105,7 +105,7 @@ Format:
 [To Do]<br/>
 {% endif %}
 
-<strong>Persistenter Identifikator des Datensatzes:</strong> 
+<strong>Persistenter Identifikator des Datensatzes:</strong>
 {% get_set_value dataset 'project/dataset/pids/system' as pid %}
 {% if pid.value %}
 {% render_set_value dataset 'project/dataset/pids/system' %}: [To Do]<br/>
@@ -115,7 +115,7 @@ Format:
 
 <strong>Related items:</strong> [To Do]<br>
 
-<strong>Lizenz des Datensatzes:</strong> 
+<strong>Lizenz des Datensatzes:</strong>
 {% get_values 'project/dataset/sharing/conditions' set_index=dataset.set_index as licenses %}
 {% if licenses %}
 <ul>
