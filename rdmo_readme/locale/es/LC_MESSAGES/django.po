@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-25 10:35+0000\n"
+"POT-Creation-Date: 2026-01-05 11:09+0000\n"
 "PO-Revision-Date: 2025-12-03 16:11+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -25,15 +25,20 @@ msgstr "URI de la vista de plantilla"
 
 #: exports.py:25
 msgid "Change this field only if you want to provide your own template view."
-msgstr "Este campo sólo debe cambiarse si se proporciona una vista de plantilla."
+msgstr ""
+"Este campo sólo debe cambiarse si se proporciona una vista de plantilla."
 
 #: exports.py:30
 msgid "Project dataset(s)"
 msgstr "Conjunto(s) de datos del proyecto"
 
 #: exports.py:31
-msgid "One README file will be created for each selected choice. If you want a single README file with all datasets, please select the last choice."
-msgstr "Se creará un archivo Léame por cada opción seleccionada. Si desea un único archivo Léame con todos los conjuntos de datos, seleccione la última opción."
+msgid ""
+"One README file will be created for each selected choice. If you want a "
+"single README file with all datasets, please select the last choice."
+msgstr ""
+"Se creará un archivo Léame por cada opción seleccionada. Si desea un único "
+"archivo Léame con todos los conjuntos de datos, seleccione la última opción."
 
 #: exports.py:40
 msgid "All datasets in one file"
@@ -45,7 +50,8 @@ msgstr "Aún no hay conjuntos de datos definidos"
 
 #: exports.py:47
 msgid "Please put some information in your data management plan."
-msgstr "La exportación será posible una vez completado el plan de gestión de datos."
+msgstr ""
+"La exportación será posible una vez completado el plan de gestión de datos."
 
 #: exports.py:69
 msgid "Something went wrong"
@@ -62,14 +68,18 @@ msgstr "Exportación de archivos Léame"
 #: templates/plugins/exports_readme.html:8
 msgid ""
 "\n"
-"        This export plugin creates one or multiple README files with information from the RDMO project's datasets.\n"
-"        You can create a custom view that needs to be imported beforehand and use it as a template for your README files. \n"
+"        This export plugin creates one or multiple README files with "
+"information from the RDMO project's datasets.\n"
+"        You can create a custom view that needs to be imported beforehand "
+"and use it as a template for your README files.\n"
 "        A default view will be otherwise used.\n"
 "    "
 msgstr ""
 "\n"
-"Este plugin de exportación crea uno o varios archivos Léame con información de los conjuntos de datos del proyecto RDMO. Para crear el archivo Léame se "
-"utiliza una vista como plantilla. Si se desea utilizar una vista alternativa, esta debe importarse previamente.\n"
+"Este plugin de exportación crea uno o varios archivos Léame con información "
+"de los conjuntos de datos del proyecto RDMO. Para crear el archivo Léame se "
+"utiliza una vista como plantilla. Si se desea utilizar una vista "
+"alternativa, esta debe importarse previamente.\n"
 "    "
 
 #: templates/plugins/exports_readme.html:14

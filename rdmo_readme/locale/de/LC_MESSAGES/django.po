@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-17 13:56+0000\n"
+"POT-Creation-Date: 2026-01-05 11:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,25 +60,24 @@ msgstr "Etwas ist schief gelaufen"
 msgid "The README could not be created."
 msgstr "Die README konnte nicht erstellt werden."
 
-#: templates/plugins/exports_readme.html:7
+#: templates/plugins/exports_readme.html:6
 msgid "Export README file(s)"
 msgstr "README-Datei(en) exportieren"
 
-#: templates/plugins/exports_readme.html:9
+#: templates/plugins/exports_readme.html:8
 msgid ""
 "\n"
 "        This export plugin creates one or multiple README files with "
 "information from the RDMO project's datasets.\n"
 "        You can create a custom view that needs to be imported beforehand "
-"and use it as a template for your README files. \n"
+"and use it as a template for your README files.\n"
 "        A default view will be otherwise used.\n"
 "    "
 msgstr ""
 "\n"
-"Dieses Export-Plugin erstellt eine oder mehrere README-Dateien mit "
-"Informationen aus den Datensätzen im RDMO-Projekt. Für die Erstellung der "
-"README-Datei wird eine Ansicht als Template benutzt. Wenn eine alternative Ansicht benutzt werden soll, muss diese davor importiert werden."
+"Dieses Export-Plugin erstellt eine oder mehrere README-Dateien mit Informationen aus den Datensätzen im RDMO-Projekt."
+"Für die Erstellung der README-Datei wird eine Ansicht als Template benutzt. Wenn eine alternative Ansicht benutzt werden soll, muss diese davor importiert werden."
 
-#: templates/plugins/exports_readme.html:15
+#: templates/plugins/exports_readme.html:14
 msgid "Go"
 msgstr "Ausführen"

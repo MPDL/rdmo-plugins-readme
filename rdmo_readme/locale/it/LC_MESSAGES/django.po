@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-25 10:53+0000\n"
+"POT-Creation-Date: 2026-01-05 11:11+0000\n"
 "PO-Revision-Date: 2025-12-03 16:09+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -37,8 +37,8 @@ msgid ""
 "One README file will be created for each selected choice. If you want a "
 "single README file with all datasets, please select the last choice."
 msgstr ""
-"Un LEGGIMI diverso sarà creato per ogni opzione selezionata. Se si vuole "
-"un unico file LEGGIMI per tutti i dati, si prega di selezionare l'ultima "
+"Un LEGGIMI diverso sarà creato per ogni opzione selezionata. Se si vuole un "
+"unico file LEGGIMI per tutti i dati, si prega di selezionare l'ultima "
 "opzione."
 
 #: exports.py:40
@@ -71,14 +71,14 @@ msgid ""
 "        This export plugin creates one or multiple README files with "
 "information from the RDMO project's datasets.\n"
 "        You can create a custom view that needs to be imported beforehand "
-"and use it as a template for your README files. \n"
+"and use it as a template for your README files.\n"
 "        A default view will be otherwise used.\n"
 "    "
 msgstr ""
 "\n"
-"        Questo plugin permette di creare ed esportare uno o più file "
-"LEGGIMI contenenti informazioni riguardo alle raccolte di dati considerate "
-"nel progetto documentato in RDMO.\n"
+"        Questo plugin permette di creare ed esportare uno o più file LEGGIMI "
+"contenenti informazioni riguardo alle raccolte di dati considerate nel "
+"progetto documentato in RDMO.\n"
 "        È possibile creare una vista personalizzata che dev'essere "
 "precedentemente importata in RDMO e utilizzata come modello per i propri "
 "file LEGGIMI. \n"
