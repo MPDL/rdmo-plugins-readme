@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-05 11:09+0000\n"
-"PO-Revision-Date: 2025-12-03 16:11+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2026-01-08 14:27+0100\n"
+"Last-Translator: Giacomo Lanza <giacomo.lanza@ptb.de>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -37,8 +37,8 @@ msgid ""
 "One README file will be created for each selected choice. If you want a "
 "single README file with all datasets, please select the last choice."
 msgstr ""
-"Se creará un archivo Léame por cada opción seleccionada. Si desea un único "
-"archivo Léame con todos los conjuntos de datos, seleccione la última opción."
+"Se creará un archivo README por cada opción seleccionada. Si desea un único "
+"archivo README con todos los conjuntos de datos, seleccione la última opción."
 
 #: exports.py:40
 msgid "All datasets in one file"
@@ -59,11 +59,11 @@ msgstr "Algo salió mal"
 
 #: exports.py:70
 msgid "The README could not be created."
-msgstr "No se pudo crear el Léame."
+msgstr "No se pudo crear el README."
 
 #: templates/plugins/exports_readme.html:6
 msgid "Export README file(s)"
-msgstr "Exportación de archivos Léame"
+msgstr "Exportación de archivos README"
 
 #: templates/plugins/exports_readme.html:8
 msgid ""
@@ -76,10 +76,11 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Este plugin de exportación crea uno o varios archivos Léame con información "
-"de los conjuntos de datos del proyecto RDMO. Para crear el archivo Léame se "
-"utiliza una vista como plantilla. Si se desea utilizar una vista "
-"alternativa, esta debe importarse previamente.\n"
+"       Este plugin de exportación crea uno o varios archivos README con "
+"información de los conjuntos de datos del proyecto RDMO.\n"
+"       Para crear el archivo README se utiliza una vista como plantilla.\n"
+"       Si se desea utilizar una vista alternativa, esta debe importarse "
+"previamente.\n"
 "    "
 
 #: templates/plugins/exports_readme.html:14

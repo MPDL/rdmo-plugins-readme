@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-05 11:13+0000\n"
-"PO-Revision-Date: 2025-12-03 16:18+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2026-01-08 14:21+0100\n"
+"Last-Translator: Giacomo Lanza <giacomo.lanza@ptb.de>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -37,8 +37,8 @@ msgid ""
 "One README file will be created for each selected choice. If you want a "
 "single README file with all datasets, please select the last choice."
 msgstr ""
-"Un fichier LISMOI va être créé pour chaques sélection. Si vous désirez un "
-"seul fichier LISMOI pour tous les jeux de données, prière de sélectionner le "
+"Un fichier README va être créé pour chaques sélection. Si vous désirez un "
+"seul fichier README pour tous les jeux de données, prière de sélectionner le "
 "dernier choix."
 
 #: exports.py:40
@@ -60,11 +60,11 @@ msgstr "Quelque chose n'a pas marché"
 
 #: exports.py:70
 msgid "The README could not be created."
-msgstr "Le fichier LISMOI n'a pas pu être crée."
+msgstr "Le fichier README n'a pas pu être crée."
 
 #: templates/plugins/exports_readme.html:6
 msgid "Export README file(s)"
-msgstr "Exporter le(s) fichier(s) LISMOI"
+msgstr "Exporter le(s) fichier(s) README"
 
 #: templates/plugins/exports_readme.html:8
 msgid ""
@@ -78,11 +78,10 @@ msgid ""
 msgstr ""
 "\n"
 "        Ce plugin permet de créer et exporter un ou plusieurs fichiers "
-"LISMOI avec les informations sur les données décrites dans un projet en "
+"README avec les informations sur les données décrites dans un projet en "
 "RDMO.\n"
 "        Vous pouvez bien générer une vue personnalisée, qui doit être "
-"importée en avance, et l'utiliser comme un modèle pour vos fichiers "
-"LISMOI.. \n"
+"importée en avance, et l'utiliser comme un modèle pour vos fichiers README.\n"
 "        Au cas contraire, une vue de défault va être utilisée.\n"
 "    "
 

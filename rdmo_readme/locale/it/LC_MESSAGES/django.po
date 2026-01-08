@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-05 11:11+0000\n"
-"PO-Revision-Date: 2025-12-03 16:09+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2026-01-08 14:29+0100\n"
+"Last-Translator: Giacomo Lanza <giacomo.lanza@ptb.de>\n"
 "Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -37,9 +37,8 @@ msgid ""
 "One README file will be created for each selected choice. If you want a "
 "single README file with all datasets, please select the last choice."
 msgstr ""
-"Un LEGGIMI diverso sarà creato per ogni opzione selezionata. Se si vuole un "
-"unico file LEGGIMI per tutti i dati, si prega di selezionare l'ultima "
-"opzione."
+"Un README diverso sarà creato per ogni opzione selezionata. Se si vuole un "
+"unico file README per tutti i dati, si prega di selezionare l'ultima opzione."
 
 #: exports.py:40
 msgid "All datasets in one file"
@@ -55,15 +54,15 @@ msgstr "Si prega di aggiungere informazioni al piano di gestione dei dati."
 
 #: exports.py:69
 msgid "Something went wrong"
-msgstr ""
+msgstr "Qualcosa è andato storto"
 
 #: exports.py:70
 msgid "The README could not be created."
-msgstr "Non è stato possibile creare il file LEGGIMI."
+msgstr "Non è stato possibile creare il file README."
 
 #: templates/plugins/exports_readme.html:6
 msgid "Export README file(s)"
-msgstr "Esportare il file LEGGIMI"
+msgstr "Esportare il/i file README"
 
 #: templates/plugins/exports_readme.html:8
 msgid ""
@@ -76,12 +75,12 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"        Questo plugin permette di creare ed esportare uno o più file LEGGIMI "
+"        Questo plugin permette di creare ed esportare uno o più file README "
 "contenenti informazioni riguardo alle raccolte di dati considerate nel "
 "progetto documentato in RDMO.\n"
 "        È possibile creare una vista personalizzata che dev'essere "
 "precedentemente importata in RDMO e utilizzata come modello per i propri "
-"file LEGGIMI. \n"
+"file README. \n"
 "        In caso contrario verrà usata una vista di default.\n"
 "    "
 
