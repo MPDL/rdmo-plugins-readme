@@ -2,11 +2,11 @@
 
 <h4>Administrative information</h4>
 
-<strong>Title of the dataset:</strong> {{ dataset.value }} <br/>
+<strong>Title of the data set:</strong> {{ dataset.value }} <br/>
 
-<strong>Creator of the ReadMe:</strong> [To Do]<br/>
+<strong>Creator of the README:</strong> [To Do]<br/>
 
-<strong>Creator of the dataset:</strong>
+<strong>Creator of the data set:</strong>
 {% get_set 'project/partner/id' as partners %}
 {% if partners %}
 {% for partner in partners %}
@@ -39,7 +39,7 @@
 </li>
 </ul>
 
-<h4>Classification of this dataset</h4>
+<h4>Classification of this data set</h4>
 
 <strong>Description of the data set:</strong>
 {% get_set_value dataset 'project/dataset/description' as description %}
@@ -115,7 +115,7 @@ Format:
 
 <strong>Related items:</strong> [To Do]<br>
 
-<strong>Licence of this dataset:</strong>
+<strong>Licence of this data set:</strong>
 {% get_values 'project/dataset/sharing/conditions' set_index=dataset.set_index as licenses %}
 {% if licenses %}
 <ul>

@@ -4,7 +4,7 @@
 
 <strong>Titre du jeu de données:</strong> {{ dataset.value }} <br/>
 
-<strong>Créateur du ReadMe:</strong> [To Do]<br/>
+<strong>Créateur du README:</strong> [To Do]<br/>
 
 <strong>Créateur du jeu de données:</strong>
 {% get_set 'project/partner/id' as partners %}
@@ -29,7 +29,7 @@
     {% endif %}
 </li>
 <li>ORCID: [To Do]</li>
-<li>Courriel électronique:
+<li>Courriel:
     {% get_set_value dataset 'project/dataset/preservation/responsible_person/email' as email %}
     {% if email.value %}
     {% render_set_value dataset 'project/dataset/preservation/responsible_person/email' %}
