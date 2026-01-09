@@ -6,11 +6,11 @@
 		<dc:comment/>
 		<order>0</order>
 		<title lang="en">ReadMe</title>
-		<help lang="en">This view provides an initial draft for a README that can be used when publishing data.</help>
+		<help lang="en">This view provides an initial draft for a ReadMe that can be used when publishing data.</help>
 		<title lang="de">ReadMe</title>
 		<help lang="de">Diese Ansicht bietet einen ersten Entwurf für ein ReadMe, das bei einer Datenpublikation genutzt werden kann.</help>
 		<title lang="es">ReadMe</title>
-		<help lang="es">Esta vista proporciona un primer borrador de un Léame que puede utilizarse para la publicación de datos.</help>
+		<help lang="es">Esta vista proporciona un primer borrador de un ReadMe que puede utilizarse para la publicación de datos.</help>
 		<title lang="fr">ReadMe</title>
 		<help lang="fr">Cette vue fournit une première ébauche d'un ReadMe qui peut être utilisé lors d'une publication de données.</help>
 		<title lang="it">ReadMe</title>
