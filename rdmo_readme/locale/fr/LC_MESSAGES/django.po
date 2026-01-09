@@ -8,62 +8,63 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-05 11:04+0000\n"
-"PO-Revision-Date: 2026-01-08 14:30+0100\n"
+"POT-Creation-Date: 2026-01-05 11:13+0000\n"
+"PO-Revision-Date: 2026-01-08 14:21+0100\n"
 "Last-Translator: Giacomo Lanza <giacomo.lanza@ptb.de>\n"
 "Language-Team: \n"
-"Language: de\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.8\n"
 
 #: exports.py:24
 msgid "Template view's URI"
-msgstr "URI der Template-Ansicht"
+msgstr "URI de la vue du modèle"
 
 #: exports.py:25
 msgid "Change this field only if you want to provide your own template view."
 msgstr ""
-"Dieses Feld soll nur geändert werden, wenn eine eigene Template-Ansicht "
-"bereitgestellt wird."
+"Changez ce champ seulement si vous voulez générer votre vue personalisée."
 
 #: exports.py:30
 msgid "Project dataset(s)"
-msgstr "Projektdatensätze"
+msgstr "Jeu(x) de données du projet"
 
 #: exports.py:31
 msgid ""
 "One README file will be created for each selected choice. If you want a "
 "single README file with all datasets, please select the last choice."
 msgstr ""
-"Für jede ausgewählte Option wird eine README-Datei erstellt. Die letzte "
-"Option erzeugt eine einzige README-Datei mit allen Datensätzen."
+"Un fichier README va être créé pour chaques sélection. Si vous désirez un "
+"seul fichier README pour tous les jeux de données, prière de sélectionner le "
+"dernier choix."
 
 #: exports.py:40
 msgid "All datasets in one file"
-msgstr "Alle Datensätze in einer Datei"
+msgstr "Tous les jeux de données dans le même fichier"
 
 #: exports.py:46
 msgid "There are no datasets defined yet"
-msgstr "Es sind noch keine Datensätze definiert"
+msgstr "Aucuns jeux de données n'ont pas encore été definis"
 
 #: exports.py:47
 msgid "Please put some information in your data management plan."
-msgstr "Der Export wird nach dem Aufüllen des Data Management Plans möglich."
+msgstr ""
+"Prière d'ajouter de l'information dans votre plan de gestion de données."
 
 #: exports.py:69
 msgid "Something went wrong"
-msgstr "Etwas ist schief gelaufen"
+msgstr "Quelque chose n'a pas marché"
 
 #: exports.py:70
 msgid "The README could not be created."
-msgstr "Die README konnte nicht erstellt werden."
+msgstr "Le fichier README n'a pas pu être crée."
 
 #: templates/plugins/exports_readme.html:6
 msgid "Export README file(s)"
-msgstr "README-Datei(en) exportieren"
+msgstr "Exporter le(s) fichier(s) README"
 
 #: templates/plugins/exports_readme.html:8
 msgid ""
@@ -76,14 +77,14 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"       Dieses Export-Plugin erstellt eine oder mehrere README-Dateien mit "
-"Informationen aus den Datensätzen im RDMO-Projekt.\n"
-"       Für die Erstellung der README-Datei wird eine Ansicht als Template "
-"benutzt.\n"
-"       Wenn eine alternative Ansicht benutzt werden soll, muss diese davor "
-"importiert werden.\n"
-"   "
+"        Ce plugin permet de créer et exporter un ou plusieurs fichiers "
+"README avec les informations sur les données décrites dans un projet en "
+"RDMO.\n"
+"        Vous pouvez bien générer une vue personnalisée, qui doit être "
+"importée en avance, et l'utiliser comme un modèle pour vos fichiers README.\n"
+"        Au cas contraire, une vue de défault va être utilisée.\n"
+"    "
 
 #: templates/plugins/exports_readme.html:14
 msgid "Go"
-msgstr "Ausführen"
+msgstr "Vas-y"

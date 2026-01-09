@@ -1,12 +1,12 @@
 {% load view_tags %}
 
-<h4>Administrative Informationen</h4>
+<h4>Informazione amministrativa</h4>
 
-<strong>Titel des Datensatzes:</strong> {{ dataset.value }} <br/>
+<strong>Titolo della raccolta di dati:</strong> {{ dataset.value }} <br/>
 
-<strong>Ersteller*in des README:</strong> [To Do]<br/>
+<strong>Creatore del README:</strong> [To Do]<br/>
 
-<strong>Ersteller*in des Datensatzes:</strong>
+<strong>Creatore della raccolta di dati:</strong>
 {% get_set 'project/partner/id' as partners %}
 {% if partners %}
 {% for partner in partners %}
@@ -18,9 +18,9 @@
 {% endif %}
 <br/>
 
-<strong>Kontaktmöglichkeit:</strong><br/>
+<strong>Dettagli di contatto:</strong><br/>
 <ul>
-<li>Name:
+<li>Nome:
     {% get_set_value dataset 'project/dataset/preservation/responsible_person/name' as name %}
     {% if name.value %}
     {% render_set_value dataset 'project/dataset/preservation/responsible_person/name' %}
@@ -29,7 +29,7 @@
     {% endif %}
 </li>
 <li>ORCID: [To Do]</li>
-<li>E-Mail:
+<li>Posta elettronica:
     {% get_set_value dataset 'project/dataset/preservation/responsible_person/email' as email %}
     {% if email.value %}
     {% render_set_value dataset 'project/dataset/preservation/responsible_person/email' %}
@@ -39,9 +39,9 @@
 </li>
 </ul>
 
-<h4>Einordnung des Datensatzes</h4>
+<h4>Classificazione di questa raccolta di dati</h4>
 
-<strong>Beschreibung des Datensatzes:</strong>
+<strong>Descrizione della raccolta di dati:</strong>
 {% get_set_value dataset 'project/dataset/description' as description %}
 {% if description.value %}
 {% render_set_value dataset 'project/dataset/description' %}<br/>
@@ -49,7 +49,7 @@
 [To Do]<br/>
 {% endif %}
 
-<strong>Beginn der Datensammlung:</strong>
+<strong>Inizio dell'acquisizione dei dati:</strong>
 {% get_set_value dataset 'project/dataset/data_collection_start' as collection_start %}
 {% if collection_start.value %}
 {% render_set_value dataset 'project/dataset/data_collection_start' %}<br/>
@@ -57,7 +57,7 @@
 [To Do]<br/>
 {% endif %}
 
-<strong>Ende der Datensammlung:</strong>
+<strong>Termine dell'acquisizione dei dati:</strong>
 {% get_set_value dataset 'project/dataset/data_collection_end' as collection_end %}
 {% if collection_end.value %}
 {% render_set_value dataset 'project/dataset/data_collection_end' %}<br/>
@@ -65,15 +65,15 @@
 [To Do]<br/>
 {% endif %}
 
-<strong>Methoden, Werkzeuge, Software und Formate:</strong> <br/>
-Instrumente, Software, Technologien, Verfahren:
+<strong>Metodi, strumenti, software e formati:</strong> <br/>
+Strumenti, software, tecnologie, processi:
 {% get_set_value dataset 'project/dataset/creation_methods' as creation_methods %}
 {% if creation_methods.value %}
 {% render_set_value dataset 'project/dataset/creation_methods' %}<br/>
 {% else %}
 [To Do]<br/>
 {% endif %}
-Format:
+Formato:
 {% get_set_value dataset 'project/dataset/format' as format %}
 {% if format.value %}
 {% render_set_value dataset 'project/dataset/format' %} <br/>
@@ -81,15 +81,15 @@ Format:
 [To Do]<br/>
 {% endif %}
 
-<strong>Namenskonventionen für die Dateien:</strong> <br/>
+<strong>Convenzioni per la denominazione dei file:</strong> <br/>
 {% get_set_value dataset 'project/dataset/storage/naming_policy' as naming_policy %}
-{% if naming_policy.text %}Die Daten sind folgendermaßen strukturiert: {{ naming_policy.text }}{% else %}[To Do]{% endif %}<br/>
+{% if naming_policy.text %}I dati sono così strutturati: {{ naming_policy.text }}{% else %}[To Do]{% endif %}<br/>
 {% get_set_value dataset 'project/dataset/storage/organisation_policy' as org_policy %}
-{% if org_policy.text %}Außerdem gelten die institutionellen Vorgaben: {{ org_policy.text }}{% else %}Es gibt keine institutionellen Vorgaben.{% endif %}<br/>
+{% if org_policy.text %} Inoltre, le linee guida dell'istituto devono essere rispettate: {{ org_policy.text }}{% else %}Non ci sono linee guida dell'istituto.{% endif %}<br/>
 
-<h4>Nachnutzung</h4>
+<h4>Riuso dei dati</h4>
 
-<strong>Werkzeuge und Software zur Nachnutzung:</strong>
+<strong>Strumenti e software per il riuso dei dati:</strong>
 {% get_set_value dataset 'project/dataset/usage_technology' as usage_technology %}
 {% if usage_technology.value %}
 {% render_set_value dataset 'project/dataset/usage_technology' %}<br/>
@@ -97,7 +97,7 @@ Format:
 [To Do]<br/>
 {% endif %}
 
-<strong>Versionen:</strong>
+<strong>Versioni:</strong>
 {% get_set_value dataset 'project/dataset/versioning_versions_differences' as versioning %}
 {% if versioning.value %}
 {% render_set_value dataset 'project/dataset/versioning_versions_differences' %}<br/>
@@ -105,7 +105,7 @@ Format:
 [To Do]<br/>
 {% endif %}
 
-<strong>Persistenter Identifikator des Datensatzes:</strong>
+<strong>Identificatori persistenti di questa raccolta di dati:</strong>
 {% get_set_value dataset 'project/dataset/pids/system' as pid %}
 {% if pid.value %}
 {% render_set_value dataset 'project/dataset/pids/system' %}: [To Do]<br/>
@@ -113,9 +113,9 @@ Format:
 [To Do]<br/>
 {% endif %}
 
-<strong>Related items:</strong> [To Do]<br>
+<strong>Oggetti correlati:</strong> [To Do]<br>
 
-<strong>Lizenz des Datensatzes:</strong>
+<strong>Licenza di questa raccolta di dati:</strong>
 {% get_values 'project/dataset/sharing/conditions' set_index=dataset.set_index as licenses %}
 {% if licenses %}
 <ul>

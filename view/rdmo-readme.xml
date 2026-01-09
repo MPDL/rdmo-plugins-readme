@@ -6,11 +6,11 @@
 		<dc:comment/>
 		<order>0</order>
 		<title lang="en">ReadMe</title>
-		<help lang="en">This view provides an initial draft for a README that can be used when publishing data.</help>
+		<help lang="en">This view provides an initial draft for a ReadMe that can be used when publishing data.</help>
 		<title lang="de">ReadMe</title>
 		<help lang="de">Diese Ansicht bietet einen ersten Entwurf für ein ReadMe, das bei einer Datenpublikation genutzt werden kann.</help>
 		<title lang="es">ReadMe</title>
-		<help lang="es">Esta vista proporciona un primer borrador de un Léame que puede utilizarse para la publicación de datos.</help>
+		<help lang="es">Esta vista proporciona un primer borrador de un ReadMe que puede utilizarse para la publicación de datos.</help>
 		<title lang="fr">ReadMe</title>
 		<help lang="fr">Cette vue fournit une première ébauche d'un ReadMe qui peut être utilisé lors d'une publication de données.</help>
 		<title lang="it">ReadMe</title>
@@ -27,12 +27,12 @@
 {% get_set 'project/dataset/id' as datasets %}
 {% get_current_language as LANGUAGE_CODE %}
 
-&lt;h1&gt;ReadMe&lt;/h1&gt;
-    {%   if LANGUAGE_CODE == &quot;de&quot; %}Dieses ReadMe enthält essentielle Informationen zum Verständnis dieses Datensatzes, um Transparenz, Nachvollziehbarkeit und Wiederverwendbarkeit der Daten sicherzustellen.
-    {% elif LANGUAGE_CODE == &quot;es&quot; %}Este Léame contiene información esencial para comprender este conjunto de datos y garantizar su transparencia, trazabilidad y reutilización.
-    {% elif LANGUAGE_CODE == &quot;fr&quot; %}Ce ReadMe contient des informations essentielles à la compréhension de cet ensemble de données, afin de garantir la transparence, la traçabilité et la réutilisation des données.
-    {% elif LANGUAGE_CODE == &quot;it&quot; %}Questo ReadMe contiene informazioni essenziali per la comprensione di questa raccolta di dati per garantire la trasparenza, la tracciabilità e la riutilizzabilità dei dati.
-    {% else %}This ReadMe contains essential information for understanding this dataset to ensure transparency, traceability and reusability of the data.
+&lt;h1&gt;README&lt;/h1&gt;
+    {%   if LANGUAGE_CODE == &quot;de&quot; %}Dieses README enthält essentielle Informationen zum Verständnis dieses Datensatzes, um Transparenz, Nachvollziehbarkeit und Wiederverwendbarkeit der Daten sicherzustellen.
+    {% elif LANGUAGE_CODE == &quot;es&quot; %}Este README contiene información esencial para comprender este conjunto de datos y garantizar su transparencia, trazabilidad y reutilización.
+    {% elif LANGUAGE_CODE == &quot;fr&quot; %}Ce README contient des informations essentielles à la compréhension de cet ensemble de données, afin de garantir la transparence, la traçabilité et la réutilisation des données.
+    {% elif LANGUAGE_CODE == &quot;it&quot; %}Questo README contiene informazioni essenziali per la comprensione di questa raccolta di dati per garantire la trasparenza, la tracciabilità e la riutilizzabilità dei dati.
+    {% else %}This README contains essential information for understanding this dataset to ensure transparency, traceability and reusability of the data.
     {% endif %}&lt;!-- DISPLAY ENGLISH TEXT FOR ANY OTHER LANGUAGE_CODE --&gt;
 
 {% if not datasets %}&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
